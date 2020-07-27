@@ -11,10 +11,6 @@ reddit = praw.Reddit(client_id= PUT_CLIENT_ID_HERE,
                      user_agent= PUT_USER_AGENT_HERE,
                      username= PUT_USER_NAME_HERE)
 
-# translator = goslate.Goslate()
-# print(translator.translate('Hello world','es'))
-# print(translator.detect('Hola mundo'))
-# print(translator.get_languages())
 
 # ---- intoEnglishBot ----
 
@@ -37,9 +33,9 @@ def intoEnglishBot():
         language = translator.get_languages()[str(languagecode)]
         try:
             translation = b.translate(to='en')
+            comment.reply(f'I translated the comment from {language.title()} to English\n\n"{translation}"')
         except:
-            comment.reply('This text is already in english! Keep in mind that this bot might detect a language to be in english if there are two different languages in the parent comment\n\nIf you think something is wrong, private message the creator at "RedditGood123"')
-            continue
-        comment.reply(f'I translated the comment from {language.title()} to English\n\n"{translation}"')
+            comment.reply('This text is already in english! Keep in mind that this bot might detect a language to be in english if there are both english and another language in the parent comment\n\nIf you think something is wrong, private message the creator at "RedditGood123"')
+
 
 intoEnglishBot()
