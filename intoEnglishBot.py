@@ -15,6 +15,15 @@ reddit = praw.Reddit(client_id= PUT_CLIENT_ID_HERE,
 # ---- intoEnglishBot ----
 
 def intoEnglishBot():
+
+    '''
+    This bot will take any parent comment that a comment replies to
+    and translates it into english if 1. the parent comment is in a
+    language other than english and 2. the comment under contains
+    !intoEnglishBot. The bot also specifies which language is being
+    translated through the detection system of Google Translate
+    '''
+
     # Goslate must be initialized for later use of its langauge list
     translator = goslate.Goslate()
     # Checks each comment posted to reddit
