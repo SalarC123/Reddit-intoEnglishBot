@@ -25,8 +25,6 @@ Go to [this website](https://www.reddit.com/prefs/apps/) and make a reddit devel
 
 ## Contact me
 
-On reddit, private message me at:
+On reddit, private message me on this account:
 
-***RedditGood123***
-or
 ***1Test2Bot3***
